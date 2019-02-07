@@ -1,5 +1,3 @@
-const userChoice = 'rock';
-
 function computerPlay(){
     let randomPlay = Math.floor(Math.random() * Math.floor(3));
     
@@ -35,3 +33,7 @@ function playRound(userChoice){
     return userWon ? `Congrats, you won! ${userChoice} beats ${compChoice}.` : `Maybe next time. ${compChoice} beats ${userChoice}.`;
 }
 
+function game(){
+    let userChoice = prompt(`Choose: Rock, Paper, Scissor`).toLocaleLowerCase().trim();
+    console.log(playRound(userChoice));
+}
